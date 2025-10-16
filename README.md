@@ -1,68 +1,61 @@
 # Submission Reminder App
 
-This is a simple Bash-based application that tracks student assignment submissions and sends reminders for pending work.
+A simple Bash script application to help track which students have submitted their assignments and send reminders for those who haven't.
 
 ---
 
-## Folder Structure
+## What’s in the app
 
-After running `create_environment.sh`, a folder `submission_reminder_{YourName}` will be created with the following structure:
+After running `create_environment.sh`, you’ll get a folder named `submission_reminder_{YourName}` with this structure:
 
-submission_reminder_Denzel/
+submission_reminder_{YourName}/
 ├── assets/
-│ └── submissions.txt # Sample student submission records
+│ └── submissions.txt # List of students and their submission status
 ├── config/
-│ └── config.env # App configuration (assignment name, days remaining)
+│ └── config.env # Stores the assignment name and days remaining
 ├── modules/
 │ └── functions.sh # Functions to check submissions
 ├── scripts/
-│ └── reminder.sh # Script to send reminders
-└── startup.sh # Starts the reminder app
+│ └── reminder.sh # Sends reminders for pending submissions
+└── startup.sh # Launches the reminder app
 
-The `copilot_shell_script.sh` is located **outside** the app folder and allows updating the assignment name.
+yaml
+Copy code
+
+There's also a `copilot_shell_script.sh` **outside** the app folder that lets you change the assignment name easily.
 
 ---
 
-## How to Run
+## How to use it
 
-### 1️⃣ Create the environment
+### 1. Set up the environment
 
-```bash
-chmod 777 create_environment.sh
+Make the setup script executable and run it:
+
+chmod 744 create_environment.sh
 ./create_environment.sh
-Enter your name when prompted.
+You'll be asked for your name.
 
-This will create submission_reminder_{YourName} with all necessary files and folders.
+This creates your submission_reminder_{YourName} folder with all the necessary files and subfolders.
 
-Step 2 Run the reminder application
+2. Run the reminder app
+Go into your app folder, make scripts executable, and start the app:
+
 cd submission_reminder_{YourName}
-chmod +x *.sh
+chmod 744 *.sh
 ./startup.sh
+You'll see the current assignment and how many days are left.
 
+The app will print a reminder for any student who hasn't submitted yet.
 
-Displays the current assignment and days remaining.
+3. Change the assignment name
+From the parent folder of your app:
 
-Lists students who have not submitted the assignment.
-
-Step 3 Update assignment name
-
-From the parent directory of submission_reminder_{YourName}:
-
-chmod +x copilot_shell_script.sh
+chmod 744 copilot_shell_script.sh
 ./copilot_shell_script.sh
-
-
 Enter a new assignment name.
 
-The script updates config/config.env and reruns the reminder.
-
-Notes
-
-Ensure all .sh files are executable: chmod +x filename.sh.
-
-submissions.txt contains sample student data; you can add more records to test.
-
-Use the feature branch for development and the main branch for the final application submission.
+The script updates the assignment in config/config.env and reruns the reminders.
 
 
 
