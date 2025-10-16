@@ -1,0 +1,16 @@
+student, assignment, status
+Chinemerem, Shell Navigation, not submitted
+Chiagoziem, Git, submitted
+Divine, Shell Navigation, not submitted
+Anissa, Shell Basics, submitted
+Jean Damour, Shell Navigation, submitted
+Bocru, Shell loops, not submitted
+Teta Sonia, Shell loops, submitted
+Allan, Conditional structures, not submitted
+Mutesi, Git, not submitted
+Ivy, Shell Navigation, not submitted
+Samuel, Shell Navigation, submitted
+Grace, Shell Navigation, not submitted
+Peter, Git, not submitted
+Amina, Shell Basics, not submitted
+Linus, Shell Navigation, not submitted
